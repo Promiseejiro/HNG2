@@ -45,6 +45,10 @@
     display: none;
   }
 
+  .second_flex {
+    width: 100%;
+  }
+
   .card_list {
     grid-template-columns: 1fr 1fr;
     margin: auto;

@@ -49,9 +49,12 @@
   .flex_container {
     display: flex;
     flex-direction: column;
+    width: 95%;
   }
 
   .card_list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    border: 1px solid red;
   }
 }

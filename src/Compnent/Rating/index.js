@@ -1,11 +1,11 @@
 import ReactStars from "react-stars";
 import React from "react";
 import { render } from "react-dom";
-
+import style from './index.module.css'
 const Rating = ({ rating }) => {
   const ratingChanged = ({}) => {};
   return (
-    <div>
+    <div className={style.container}>
       <ReactStars
         count={5}
         onChange={ratingChanged}
