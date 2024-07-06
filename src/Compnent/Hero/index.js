@@ -26,7 +26,6 @@ const Hero = () => {
               size="16px"
               lineHeight="25px"
               align="left"
-              width="65%"
             >
               Stay connected and healthy with our latest smart watches! Track
               your workouts and recieve notification on a go.
@@ -38,7 +37,7 @@ const Hero = () => {
         </div>
         <div className={style.flex_item}>
           <div>
-            <img src={watch} />
+            <img src={watch} className={style.image} />
           </div>
         </div>
       </div>

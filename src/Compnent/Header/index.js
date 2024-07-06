@@ -1,6 +1,7 @@
 import Logo from "../Logo";
 import style from "./index.module.css";
-import search from "../../assets/svg/search.svg";
+import cart from "../../assets/svg/cart.svg";
+import notify from "../../assets/svg/notification.svg";
 const Header = () => {
   return (
     <header className={style.header}>
@@ -12,15 +13,14 @@ const Header = () => {
       <div>
         <div className={style.header_list}>
           <a>Home</a>
-          <a>Home</a>
-          <a>Home</a>
-          <a>Home</a>
+          <a>Categoy</a>
+          <a>Blog</a>
+          <a>Contacts</a>
         </div>
       </div>
       <div className={style.icon_container}>
-        <img src={search} className={style.header_icon} />
-        <img src={search} className={style.header_icon} />
-        <img src={search} className={style.header_icon} />
+        <img src={cart} className={style.header_icon} />
+        <img src={notify} className={style.header_icon} />
       </div>
     </header>
   );

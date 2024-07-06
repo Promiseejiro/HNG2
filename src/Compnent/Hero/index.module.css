@@ -25,3 +25,14 @@
   align-items: start;
   justify-content: start;
 }
+
+@media (max-width: 768px) {
+  .flex_container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .image {
+    width: 200px;
+  }
+}

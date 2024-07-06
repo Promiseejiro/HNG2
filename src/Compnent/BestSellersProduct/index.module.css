@@ -42,5 +42,16 @@
 .card_list {
   display: grid;
   grid-template-columns: 190px 190px 190px;
-  gap: 16px 32px;
+  gap: 16px 40px;
+}
+
+@media (max-width: 768px) {
+  .flex_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card_list {
+    grid-template-columns: 1fr;
+  }
 }

@@ -13,6 +13,8 @@
 
 .App {
   text-align: center;
+  max-width: 2500px;
+  margin: auto;
 }
 
 div,

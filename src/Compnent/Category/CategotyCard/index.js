@@ -7,7 +7,7 @@ const CategoryCard = ({ image, cardText }) => {
       <div className={style.container}>
         <div>
           <div className={style.image_container}>
-            <img src={watch} alt="Product" className={style.image} />
+            <img src={image} alt="Product" className={style.image} />
           </div>
           <Typography fontWeight="500" size="18px" align="center">
             {cardText}
