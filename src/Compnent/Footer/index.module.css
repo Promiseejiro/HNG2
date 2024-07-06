@@ -63,4 +63,12 @@
     display: flex;
     flex-direction: column;
   }
+
+  .list {
+    width: 90%;
+  }
+
+  .newLetter {
+    width: 90%;
+  }
 }
