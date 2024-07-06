@@ -41,7 +41,12 @@
     flex-direction: column-reverse;
   }
 
+  .first_container {
+    display: none;
+  }
+
   .card_list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
   }
 }

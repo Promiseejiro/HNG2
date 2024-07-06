@@ -32,7 +32,17 @@
     flex-direction: column-reverse;
   }
 
+  .top_hero {
+    width: 90%;
+    margin: 32px auto;
+  }
+
   .image {
-    width: 200px;
+    width: 250px;
+  }
+
+  .btn_container {
+    align-items: center;
+    justify-content: center;
   }
 }
