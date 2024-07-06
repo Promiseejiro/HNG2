@@ -1,0 +1,29 @@
+.header {
+  background-color: var(--main-color);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo_container {
+  margin-top: 10px;
+}
+
+.header_list {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.icon_container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header_icon {
+  width: 30px;
+  width: 30px;
+}

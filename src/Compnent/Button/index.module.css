@@ -1,0 +1,8 @@
+.btn {
+  background-color: var(--dark-main-color);
+  color: var(--white-color);
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  display: inline-block;
+}

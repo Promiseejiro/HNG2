@@ -1,0 +1,27 @@
+.hero_container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.top_hero {
+  width: 55%;
+  margin: 32px auto;
+}
+
+.flex_container {
+  display: flex;
+}
+
+.flex_container > div {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn_container {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}

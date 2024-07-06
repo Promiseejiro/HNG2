@@ -1,0 +1,31 @@
+.container {
+  padding: 10px 20px 0px 20px;
+  width: 160px;
+  border: 2px solid #f4f4f4;
+  border-radius: 25px;
+  max-width: 180px;
+  border: 2px solid #f4f4f4;
+}
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 70px;
+  height: auto;
+}
+
+.product_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.btn_container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

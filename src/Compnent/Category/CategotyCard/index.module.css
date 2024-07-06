@@ -1,0 +1,14 @@
+.container {
+  width: 180px;
+}
+
+.image_container {
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border: 2px solid #f4f4f4;
+}
+
+.image {
+  width: 120px;
+  height: auto;
+}
