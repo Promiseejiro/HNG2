@@ -9,7 +9,7 @@ const Rating = ({ newRating }) => {
       <ReactStars
         count={5}
         onChange={ratingChanged}
-        size={24}
+        size={16}
         color2={"#FFB020"}
         value={newRating}
       />

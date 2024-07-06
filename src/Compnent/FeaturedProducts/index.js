@@ -22,7 +22,6 @@ const FeaturedProduct = () => {
           <div>
             <div className={style.card_list}>
               <Product />
-
               <Product />
 
               <Product />

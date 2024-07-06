@@ -19,8 +19,8 @@ const Header = () => {
       </div>
       <div className={style.icon_container}>
         <img src={search} className={style.header_icon} />
-        <img src={search} />
-        <img src={search} />
+        <img src={search} className={style.header_icon} />
+        <img src={search} className={style.header_icon} />
       </div>
     </header>
   );
