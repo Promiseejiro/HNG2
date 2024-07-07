@@ -6,6 +6,13 @@
   margin: 0 auto 32px auto;
 }
 
+.back_container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin: 1rem;
+}
+
 .header {
   width: 75%;
   margin: 30px auto;
@@ -25,8 +32,6 @@
   align-items: center;
   justify-content: center;
 }
-
-
 
 @media (max-width: 768px) {
   .flex_container {

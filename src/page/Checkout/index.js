@@ -45,6 +45,19 @@ const Checkout = () => {
     <div>
       <div className={style.main_container}>
         <Header />
+        <div className={style.back_container}>
+          <Link to="/" className={style.link}>
+            <Typography
+              fontWeight="500"
+              size="18px"
+              lineHeight="35px"
+              color=" #056050"
+              marginVertical="0"
+            >
+              Back
+            </Typography>
+          </Link>
+        </div>
         <div className={style.header}>
           <Typography
             fontWeight="700"
