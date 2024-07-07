@@ -13,15 +13,7 @@ const Product = ({ image, name, rating, price }) => {
       <div>
         <div className={style.product_info}>
           <Rating rating={rating} />
-          <Typography
-            fontWeight="500"
-            size="14px"
-            align="left"
-            marginHorizontal="0"
-            marginVertical="0"
-          >
-            {name}
-          </Typography>
+          <p className={style.name}>{name}</p>
           <Typography
             fontWeight="500"
             size="14px"
@@ -35,7 +27,7 @@ const Product = ({ image, name, rating, price }) => {
             <Button textSize="12px" fontWeight="300" verticalPadding="0px">
               Add to cart
             </Button>
-            <FavoriteBtn />
+           
           </div>
         </div>
       </div>

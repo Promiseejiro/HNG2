@@ -59,6 +59,12 @@ const BestSellersProduct = () => {
       rating: 4,
       price: "$600",
     },
+    {
+      image: fridge,
+      name: "Standard washing",
+      rating: 5,
+      price: "$500",
+    },
   ];
   return (
     <section>
@@ -75,7 +81,6 @@ const BestSellersProduct = () => {
                 lineHeight="25px"
                 align="left"
                 width="65%"
-                marginHorizontal="10px"
               >
                 Standard washing machine
               </Typography>
@@ -104,7 +109,9 @@ const BestSellersProduct = () => {
         <div className={style.flex_item}>
           <div className={style.card_list}>
             {product.map((item) => (
-              <Product {...item} />
+              <div >
+                <Product {...item} />
+              </div>
             ))}
           </div>
         </div>
