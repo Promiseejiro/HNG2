@@ -26,17 +26,6 @@ const CartTable = ({ savedProduct, actionInProduct }) => {
           ))}
         </tbody>
       </table>
-      <Link to="/" className={style.link}>
-        <Typography
-          fontWeight="500"
-          size="14px"
-          lineHeight="35px"
-          marginHorizontal="20px"
-          color=" #056050"
-        >
-          Continue shopping
-        </Typography>
-      </Link>
     </div>
   );
 };
