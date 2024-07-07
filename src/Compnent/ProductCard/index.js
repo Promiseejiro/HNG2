@@ -1,10 +1,29 @@
-// import image from "../../assets/images/watch.png";
 import Button from "../Button";
 import FavoriteBtn from "../FavouriteBtn";
 import Rating from "../Rating";
 import Typography from "../Typograhy";
 import style from "./index.module.css";
-const Product = ({ image, name, rating, price }) => {
+const Product = ({ image, name, rating, price, url }) => {
+  const addToCart = () => {
+    let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
+    if (!savedProduct) {
+      savedProduct = [{ image, name, rating, price, url, qty: 1 }];
+      localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+    } else {
+      const prevProduct = localStorage.getItem("timbo-product");
+      const checkIfProductIsincart = JSON.parse(prevProduct).filter(
+        (product) => product.url === url
+      );
+      if (checkIfProductIsincart.length === 1) {
+      } else {
+        savedProduct = [
+          ...savedProduct,
+          { image, name, rating, price, url, qty: 1 },
+        ];
+        localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+      }
+    }
+  };
   return (
     <div className={style.container}>
       <div className={style.image_container}>
@@ -24,10 +43,16 @@ const Product = ({ image, name, rating, price }) => {
             {price}
           </Typography>
           <div className={style.btn_container}>
-            <Button textSize="12px" fontWeight="300" verticalPadding="0px">
+            <Button
+              textSize="12px"
+              fontWeight="300"
+              verticalPadding="0px"
+              clickHandler={() => {
+                addToCart();
+              }}
+            >
               Add to cart
             </Button>
-           
           </div>
         </div>
       </div>

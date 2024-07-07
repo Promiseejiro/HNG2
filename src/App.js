@@ -1,23 +1,16 @@
 import "./App.css";
-import BestSellers from "./Compnent/BestSellers";
-import BestSellersProduct from "./Compnent/BestSellersProduct";
-import Category from "./Compnent/Category";
-import CategoryCard from "./Compnent/Category/CategotyCard";
-import FeaturedProduct from "./Compnent/FeaturedProducts";
-import Footer from "./Compnent/Footer";
-import Header from "./Compnent/Header";
-import Hero from "./Compnent/Hero";
-
+import HomePage from "../src/page/HomePage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Checkout from "./page/Checkout";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Category />
-      <FeaturedProduct />
-      <BestSellers />
-      <BestSellersProduct />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/cart" element={<Checkout />}></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

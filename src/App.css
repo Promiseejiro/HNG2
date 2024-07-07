@@ -30,3 +30,7 @@ li,
 button {
   font-family: var(--font-family);
 }
+
+a {
+  text-decoration: none;
+}
