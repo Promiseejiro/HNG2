@@ -15,6 +15,7 @@ import gameset from "../../assets/images/gameset.png";
 import ledtv from "../../assets/images/ledtv.png";
 import fridge from "../../assets/images/fridge.png";
 import riglight from "../../assets/images/riglight.png";
+import toast from "react-hot-toast";
 const BestSellersProduct = () => {
   const product = [
     {
@@ -59,63 +60,45 @@ const BestSellersProduct = () => {
       price: 600,
       url: "ctvcamera.png",
     },
-    {
-      image: ctvcamera2,
-      name: "CCTV camera",
-      rating: 4,
-      price: 600,
-      url: "2ctvcamera.png",
-    },
-    {
-      image: minicamera,
-      name: "Camera",
-      rating: 3,
-      price: 600,
-      url: "minicamera.png",
-    },
-    {
-      image: gamepad,
-      name: "Game pad",
-      rating: 3,
-      price: 600,
-      url: "gamepad.png",
-    },
-    {
-      image: gameset,
-      name: "Excel game set",
-      rating: 3,
-      price: 600,
-      url: "gameset.png",
-    },
-    {
-      image: watch,
-      name: "12 pro smart watch",
-      rating: 5,
-      price: 500,
-      url: "secondWatch.png",
-    },
-    {
-      image: ledtv,
-      name: "Smart TV",
-      rating: 5,
-      price: 500,
-      url: "ledtv.png",
-    },
-    {
-      image: fridge,
-      name: "Standard washing",
-      rating: 5,
-      price: 500,
-      url: "fridge.png",
-    },
-    {
-      image: riglight,
-      name: "Ring light",
-      rating: 5,
-      price: 500,
-      url: "riglight.png",
-    },
   ];
+
+  const addToCart = () => {
+    let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
+    if (!savedProduct) {
+      savedProduct = [
+        {
+          image: fridge,
+          name: "Standard washing ",
+          rating: 4,
+          price: 600,
+          url: "fidge",
+          qty: 1,
+        },
+      ];
+      localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+      toast("item addes");
+    } else {
+      const prevProduct = localStorage.getItem("timbo-product");
+      const checkIfProductIsincart = JSON.parse(prevProduct).filter(
+        (product) => product.url === "fidge"
+      );
+      if (checkIfProductIsincart.length === 1) {
+      } else {
+        savedProduct = [
+          ...savedProduct,
+          {
+            image: fridge,
+            name: "Standard washing ",
+            rating: 4,
+            price: 600,
+            url: "fidge",
+            qty: 1,
+          },
+        ];
+        localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+      }
+    }
+  };
   return (
     <section>
       <div className={style.flex_container}>
@@ -149,6 +132,9 @@ const BestSellersProduct = () => {
                   textSize="14px"
                   verticalPadding="2px"
                   horizontalMargin="10px"
+                  clickHandler={() => {
+                    addToCart();
+                  }}
                 >
                   Add to cart
                 </Button>
@@ -156,12 +142,10 @@ const BestSellersProduct = () => {
             </div>
           </div>
         </div>
-        <div className={style.flex_item}>
+        <div className={style.second_flex}>
           <div className={style.card_list}>
             {product.map((item, index) => (
-              <div>
-                <Product {...item} key={index} />
-              </div>
+              <Product {...item} key={index} />
             ))}
           </div>
         </div>

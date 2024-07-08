@@ -27,7 +27,7 @@ const BestSellers = () => {
             </Typography>
             <div className={style.btn_container}>
               <Button
-                fontWeight="400"
+                   fontWeight="400"
                 textSize="14px"
                 verticalPadding="5px"
                 horizontalMargin="10px"

@@ -1,0 +1,55 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.card_list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px 10px;
+  margin-bottom: 1rem;
+}
+
+.shippingCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  border: 1px solid gray;
+  padding: 1rem 0;
+  border-radius: 10px;
+  gap: 0;
+  margin: auto;
+}
+
+.shippingCard h5 {
+  color: var(--dark-main-color);
+  font-weight: 600;
+  font-size: 18px;
+  display: inline-block;
+  margin: 0;
+}
+
+.shippingCard p {
+  color: var(--dark-main-color);
+  font-weight: 500;
+  font-size: 14px;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    margin: auto;
+  }
+  .card_list {
+    grid-template-columns: auto auto;
+    gap: 10px;
+  }
+
+  .last {
+    grid-area: 2/ 1 / span 2 / span 3;
+    margin: auto;
+  }
+}

@@ -1,4 +1,4 @@
-import style from './index.module.css'
+import style from "./index.module.css";
 
 const Typography = ({
   marginVertical = "10px",
@@ -13,14 +13,14 @@ const Typography = ({
   width,
 }) => {
   return (
-    <p className={style.paragraph}
+    <p
+      className={style.paragraph}
       style={{
         margin: `${marginVertical} ${marginHorizontal}`,
         lineHeight: `${lineHeight}`,
         color: `${color}`,
         fontSize: `${size}`,
         fontWeight: `${fontWeight}`,
-        // textAlign: align,
         width: `${width}`,
       }}
     >

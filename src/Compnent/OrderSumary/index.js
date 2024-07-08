@@ -1,6 +1,15 @@
 import Typography from "../Typograhy";
 import style from "./index.module.css";
-const OrderSummary = ({ total }) => {
+import Button from "../Button";
+import CheckOutModal from "../CheckoutModal";
+import { useState } from "react";
+const OrderSummary = ({ total, checkOutSuccess }) => {
+  const [openCheckout, setOpenCheckout] = useState(false);
+
+  const checkOutHandler = () => {
+    setOpenCheckout(!openCheckout);
+  };
+
   return (
     <div className={style.container}>
       <div className={style.header}>
@@ -85,6 +94,16 @@ const OrderSummary = ({ total }) => {
           ${total}
         </Typography>
       </div>
+      <div>
+        <Button
+          verticalPadding="5px"
+          horizontalPadding="50px"
+          clickHandler={checkOutHandler}
+        >
+          Checkout
+        </Button>
+      </div>
+      {openCheckout && <CheckOutModal closeCheckout={checkOutSuccess} />}
     </div>
   );
 };

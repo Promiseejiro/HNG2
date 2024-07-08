@@ -2,8 +2,15 @@ import Logo from "../Logo";
 import style from "./index.module.css";
 import cart from "../../assets/svg/cart.svg";
 import notify from "../../assets/svg/notification.svg";
+import bar from "../../assets/svg/3bar.svg";
 import { Link } from "react-router-dom";
+import SideBar from "../SideBar";
+import { useState } from "react";
 const Header = () => {
+  const [openSideBar, setOpenSideBar] = useState(false);
+  const sideBarOpenHandler = () => {
+    setOpenSideBar(!openSideBar);
+  };
   return (
     <header className={style.header}>
       <div>
@@ -23,8 +30,14 @@ const Header = () => {
         <Link to="/cart">
           <img src={cart} className={style.header_icon} />
         </Link>
-        <img src={notify} className={style.header_icon} />
+        <div>
+          <img src={notify} className={style.notify} />
+        </div>
+        <div>
+          <img src={bar} className={style.bar} onClick={sideBarOpenHandler} />
+        </div>
       </div>
+      {openSideBar && <SideBar closeSideBar={sideBarOpenHandler} />}
     </header>
   );
 };

@@ -5,6 +5,7 @@ import FeaturedProduct from "../../Compnent/FeaturedProducts";
 import Header from "../../Compnent/Header";
 import Hero from "../../Compnent/Hero";
 import Footer from "../../Compnent/Footer";
+import ShippingCards from "../../Compnent/ShippingCard";
 const HomePage = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const HomePage = () => {
       <FeaturedProduct />
       <BestSellers />
       <BestSellersProduct />
+      <ShippingCards />
       <Footer />
     </div>
   );

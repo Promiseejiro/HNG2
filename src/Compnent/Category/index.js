@@ -33,7 +33,7 @@ const Category = () => {
     <div className={style.section}>
       <Typography
         fontWeight="600"
-        size="30px"
+        size="25px"
         lineHeight="40px"
         align="left"
         marginVertical="20px"

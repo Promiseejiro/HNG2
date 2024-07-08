@@ -3,12 +3,15 @@ import FavoriteBtn from "../FavouriteBtn";
 import Rating from "../Rating";
 import Typography from "../Typograhy";
 import style from "./index.module.css";
+import toast from "react-hot-toast";
+import Toast from "../Toast";
 const Product = ({ image, name, rating, price, url }) => {
   const addToCart = () => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     if (!savedProduct) {
       savedProduct = [{ image, name, rating, price, url, qty: 1 }];
       localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+      toast("item addes");
     } else {
       const prevProduct = localStorage.getItem("timbo-product");
       const checkIfProductIsincart = JSON.parse(prevProduct).filter(

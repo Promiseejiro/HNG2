@@ -135,9 +135,9 @@ const FeaturedProduct = () => {
         Featured Product
       </Typography>
       <div className={style.flex_container}>
-        <div className={style.first_container}>
+        {/* <div className={style.first_container}>
           <div className={style.verticalLine}></div>
-        </div>
+        </div> */}
         <div className={style.second_flex}>
           <div className={style.card_list}>
             {product.map((item, index) => (

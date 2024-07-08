@@ -4,6 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 
 .logo_container {
@@ -34,8 +37,28 @@
   font-weight: 500;
 }
 
+.notify {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+}
+
+.bar {
+  font-size: 14px;
+  font-weight: 500;
+  display: none;
+}
+
 @media (max-width: 768px) {
   .header_list {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+  }
+
+  .notify {
     display: none;
   }
 }

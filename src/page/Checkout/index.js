@@ -6,6 +6,8 @@ import OrderSummary from "../../Compnent/OrderSumary";
 import Typography from "../../Compnent/Typograhy";
 import style from "./index.module.css";
 import { Link } from "react-router-dom";
+import ShippingCards from "../../Compnent/ShippingCard";
+
 
 const Checkout = () => {
   const [savedProduct, setSavedProduct] = useState([]);
@@ -35,10 +37,15 @@ const Checkout = () => {
     setSavedProduct(newProduct);
   };
 
+  const checkOutSuccess = () => {
+    setSavedProduct([]);
+    localStorage.removeItem("timbo-product");
+  };
+
   useEffect(() => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
-    setSavedProduct(savedProduct);
-    setTotal(calculateTotal(savedProduct));
+    savedProduct && setSavedProduct(savedProduct);
+    savedProduct && setTotal(calculateTotal(savedProduct));
   }, []);
 
   return (
@@ -78,7 +85,7 @@ const Checkout = () => {
             </div>
 
             <div className={style.flex_item_2}>
-              <OrderSummary total={total} />
+              <OrderSummary total={total} checkOutSuccess={checkOutSuccess} />
             </div>
           </div>
         ) : (
@@ -93,17 +100,6 @@ const Checkout = () => {
               >
                 Cart is empty
               </Typography>
-              <Link to="/" className={style.link}>
-                <Typography
-                  fontWeight="500"
-                  size="14px"
-                  lineHeight="35px"
-                  marginHorizontal="20px"
-                  color=" #056050"
-                >
-                  Continue shopping
-                </Typography>
-              </Link>
             </div>
           </div>
         )}
@@ -118,6 +114,11 @@ const Checkout = () => {
             Continue shopping
           </Typography>
         </Link>
+        <div>
+       
+          
+        </div>
+
         <Footer />
       </div>
     </div>
