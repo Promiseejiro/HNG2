@@ -16,7 +16,7 @@ import ledtv from "../../assets/images/ledtv.png";
 import fridge from "../../assets/images/fridge.png";
 import riglight from "../../assets/images/riglight.png";
 import toast from "react-hot-toast";
-const BestSellersProduct = () => {
+const BestSellersProduct = ({ updateCartCount }) => {
   const product = [
     {
       image: watch,
@@ -215,7 +215,11 @@ const BestSellersProduct = () => {
         <div className={style.second_flex}>
           <div className={style.card_list}>
             {product.map((item, index) => (
-              <Product {...item} key={index} />
+              <Product
+                {...item}
+                key={index}
+                updateCartCount={updateCartCount}
+              />
             ))}
           </div>
         </div>

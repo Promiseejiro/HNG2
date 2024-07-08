@@ -23,7 +23,7 @@ const HomePage = () => {
       <Hero />
       <FeaturedProduct updateCartCount={updateCartCount} />
       <BestSellers />
-      <BestSellersProduct />
+      <BestSellersProduct updateCartCount={updateCartCount}/>
       <ShippingCards />
       <Footer />
     </div>
