@@ -3,6 +3,7 @@ import success from "../../../src/assets/svg/Mask group.svg";
 import style from "./index.module.css";
 import Typography from "../Typograhy";
 import Button from "../Button";
+import { Link } from "react-router-dom";
 const CheckOutModal = ({ closeCheckout }) => {
   return (
     <section className={style.modal}>
@@ -26,15 +27,17 @@ const CheckOutModal = ({ closeCheckout }) => {
         >
           Checkout successfull
         </Typography>
-        <Button
-          verticalPadding="5px"
-          horizontalPadding="50px"
-          fontSize="14px"
-          fontWeight="400"
-          clickHandler={closeCheckout}
-        >
-          Back to shop
-        </Button>
+        <Link to="/" className={style.link}>
+          <Button
+            verticalPadding="5px"
+            horizontalPadding="50px"
+            fontSize="14px"
+            fontWeight="400"
+            clickHandler={closeCheckout}
+          >
+            Back to shop
+          </Button>
+        </Link>
       </div>
     </section>
   );

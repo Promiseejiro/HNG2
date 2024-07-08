@@ -7,7 +7,8 @@ import Typography from "../../Compnent/Typograhy";
 import style from "./index.module.css";
 import { Link } from "react-router-dom";
 import ShippingCards from "../../Compnent/ShippingCard";
-
+import Toast from "../../Compnent/Toast";
+import toast from "react-hot-toast";
 
 const Checkout = () => {
   const [savedProduct, setSavedProduct] = useState([]);
@@ -31,6 +32,7 @@ const Checkout = () => {
       );
     } else if (action === "clear") {
       newProduct = savedProduct.filter((product) => product.url !== url);
+      toast(<Toast text={"Item removed from cart"} type="danger" />);
     }
     localStorage.setItem("timbo-product", JSON.stringify(newProduct));
     setTotal(calculateTotal(newProduct));
@@ -114,10 +116,7 @@ const Checkout = () => {
             Continue shopping
           </Typography>
         </Link>
-        <div>
-       
-          
-        </div>
+        <div></div>
 
         <Footer />
       </div>
