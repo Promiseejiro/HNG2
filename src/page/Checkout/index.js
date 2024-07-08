@@ -13,6 +13,8 @@ import toast from "react-hot-toast";
 const Checkout = () => {
   const [savedProduct, setSavedProduct] = useState([]);
   const [total, setTotal] = useState(0);
+  const [cartCount, setCountCount] = useState(0);
+
   const calculateTotal = (arr) => {
     return arr.reduce((accumulator, item) => {
       const value = item.qty * item.price;
@@ -47,13 +49,14 @@ const Checkout = () => {
   useEffect(() => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     savedProduct && setSavedProduct(savedProduct);
+    setCountCount(savedProduct.length);
     savedProduct && setTotal(calculateTotal(savedProduct));
   }, []);
 
   return (
     <div>
       <div className={style.main_container}>
-        <Header />
+        <Header count={cartCount} />
         <div className={style.back_container}>
           <Link to="/" className={style.link}>
             <Typography

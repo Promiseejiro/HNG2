@@ -6,12 +6,22 @@ import Header from "../../Compnent/Header";
 import Hero from "../../Compnent/Hero";
 import Footer from "../../Compnent/Footer";
 import ShippingCards from "../../Compnent/ShippingCard";
+import { useEffect, useState } from "react";
 const HomePage = () => {
+  const [cartCount, setCountCount] = useState(0);
+  const updateCartCount = (count) => {
+    setCountCount(count);
+  };
+
+  useEffect(() => {
+    let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
+    setCountCount(savedProduct.length);
+  }, []);
   return (
     <div>
-      <Header />
+      <Header count={cartCount} />
       <Hero />
-      <FeaturedProduct />
+      <FeaturedProduct updateCartCount={updateCartCount} />
       <BestSellers />
       <BestSellersProduct />
       <ShippingCards />

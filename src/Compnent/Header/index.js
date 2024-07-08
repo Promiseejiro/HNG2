@@ -6,7 +6,7 @@ import bar from "../../assets/svg/3bar.svg";
 import { Link } from "react-router-dom";
 import SideBar from "../SideBar";
 import { useState } from "react";
-const Header = () => {
+const Header = ({ count }) => {
   const [openSideBar, setOpenSideBar] = useState(false);
   const sideBarOpenHandler = () => {
     setOpenSideBar(!openSideBar);
@@ -28,7 +28,13 @@ const Header = () => {
       </div>
       <div className={style.icon_container}>
         <Link to="/cart">
-          <img src={cart} className={style.header_icon} />
+          <div className={style.cartContainer}>
+            <div className={style.count}>
+              <p> {count}</p>
+            </div>
+
+            <img src={cart} className={style.header_icon} />
+          </div>
         </Link>
         <div>
           <img src={notify} className={style.notify} />

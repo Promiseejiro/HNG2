@@ -6,12 +6,13 @@ import style from "./index.module.css";
 import toast from "react-hot-toast";
 import Toast from "../Toast";
 import { Link } from "react-router-dom";
-const Product = ({ image, name, rating, price, url }) => {
+const Product = ({ image, name, rating, price, url, updateCartCount }) => {
   const addToCart = () => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     if (!savedProduct) {
       savedProduct = [{ image, name, rating, price, url, qty: 1 }];
       localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
+      updateCartCount(savedProduct.length);
       toast(<Toast text={"Item Added to cart"} type="success" />);
     } else {
       const prevProduct = localStorage.getItem("timbo-product");
@@ -26,6 +27,7 @@ const Product = ({ image, name, rating, price, url }) => {
           { image, name, rating, price, url, qty: 1 },
         ];
         toast(<Toast text={"Item Added to cart"} type="success" />);
+        updateCartCount(savedProduct.length);
         localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
       }
     }

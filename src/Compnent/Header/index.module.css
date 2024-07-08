@@ -32,6 +32,29 @@
   width: 25px;
 }
 
+.cartContainer {
+  position: relative;
+}
+
+.count {
+  position: absolute;
+  right: -0.5rem;
+  top: -2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count p {
+  background-color: white;
+  color: var(--main-color);
+  min-width: 1.2rem;
+  min-height: 0.5rem;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 500;
+}
+
 .header_list a {
   font-size: 14px;
   font-weight: 500;
