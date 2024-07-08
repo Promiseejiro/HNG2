@@ -6,7 +6,13 @@ import earpod from "../../assets/images/earpod.png";
 import categoryWatch from "../../assets/images/categoryWatch.png";
 import camera from "../../assets/images/3redcamera.png";
 import phone from "../../assets/images/phone.jpg";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { useRef } from "react";
 const Category = () => {
+  const containerRef = useRef();
+  const location = useLocation();
+
   const category = [
     {
       image: headPhone,
@@ -29,8 +35,18 @@ const Category = () => {
       name: "Phones",
     },
   ];
+
+  useEffect(() => {
+    if (location.hash == "#category") {
+      console.log("cater");
+      window.scrollTo({
+        top: containerRef.current.getBoundingClientRect().top - 120,
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
   return (
-    <div className={style.section} >
+    <div className={style.section} ref={containerRef}>
       <Typography
         fontWeight="600"
         size="25px"

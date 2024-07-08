@@ -6,7 +6,10 @@ import style from "./index.module.css";
 import toast from "react-hot-toast";
 import Toast from "../Toast";
 import { Link } from "react-router-dom";
+import { MdFavorite } from "react-icons/md";
+import { useState } from "react";
 const Product = ({ image, name, rating, price, url, updateCartCount }) => {
+  const [liked, setLiked] = useState(false);
   const addToCart = () => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     if (!savedProduct) {
@@ -34,6 +37,13 @@ const Product = ({ image, name, rating, price, url, updateCartCount }) => {
   };
   return (
     <div className={style.container}>
+      <MdFavorite
+        style={{ color: liked ? "red" : "" }}
+        className={style.like_btn}
+        onClick={() => {
+          setLiked(true);
+        }}
+      />
       <Link to={`/${url}`}>
         <div className={style.image_container}>
           <img src={image} className={style.image} />

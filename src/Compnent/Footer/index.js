@@ -1,9 +1,22 @@
 import Typography from "../Typograhy";
 import style from "./index.module.css";
 import icon from "../../../src/assets/svg/messageIcon.svg";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 const Footer = () => {
+  const containerRef = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash == "#contact") {
+      window.scrollTo({
+        top: containerRef.current.getBoundingClientRect().top - 120,
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
   return (
-    <section className={style.section}>
+    <section className={style.section} ref={containerRef}>
       <div>
         <div className={style.flex_container}>
           <div className={style.list}>

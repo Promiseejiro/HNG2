@@ -5,6 +5,7 @@
   border-radius: 25px;
   max-width: 180px;
   border: 2px solid #f4f4f4;
+  position: relative;
 }
 
 .name {
@@ -43,6 +44,12 @@
 a {
   text-decoration: none;
   color: black;
+}
+
+.like_btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
 
 @media (max-width: 768px) {

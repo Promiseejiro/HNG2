@@ -8,6 +8,20 @@
   margin: 32px auto;
 }
 
+.top_hero h5 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 35px;
+  width: 90%;
+}
+
+.top_hero span {
+  color: #056050;
+  margin-right: 10px;
+  text-align: center;
+}
+
 .flex_container {
   display: flex;
 }

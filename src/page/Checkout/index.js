@@ -52,6 +52,7 @@ const Checkout = () => {
     savedProduct && setSavedProduct(savedProduct);
     setCountCount(savedProduct.length);
     savedProduct && setTotal(calculateTotal(savedProduct));
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (

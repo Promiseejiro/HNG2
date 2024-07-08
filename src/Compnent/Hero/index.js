@@ -2,22 +2,27 @@ import Button from "../Button";
 import Typography from "../Typograhy";
 import style from "./index.module.css";
 import watch from "../../../src/assets/images/watch.png";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 const Hero = () => {
+  const containerRef = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash == "#home") {
+      window.scrollTo({
+        top: containerRef.current.getBoundingClientRect().top - 120,
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
   return (
-    <div className={style.hero_container}>
+    <div className={style.hero_container} ref={containerRef}>
       <div className={style.top_hero}>
-        <Typography fontWeight="700" size="25px" lineHeight="50px">
-          Stay connected, Stay fit,Stay stylish with{" "}
-          <Typography
-            fontWeight="700"
-            size="25px"
-            lineHeight="50px"
-            color="#056050"
-          >
-            Timbo Cloud
-          </Typography>
+        <h5>
+          Stay connected, Stay fit,Stay stylish with <span>Timbo Cloud</span>
           watches
-        </Typography>
+        </h5>
       </div>
       <div className={style.flex_container}>
         <div className={style.flex_item}>

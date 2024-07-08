@@ -11,6 +11,7 @@ const Typography = ({
   fontWeight = "500",
   align,
   width,
+  display,
 }) => {
   return (
     <p
@@ -22,6 +23,7 @@ const Typography = ({
         fontSize: `${size}`,
         fontWeight: `${fontWeight}`,
         width: `${width}`,
+        display: `${display && display}`,
       }}
     >
       {children || text}

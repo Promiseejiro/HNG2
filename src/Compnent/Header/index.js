@@ -20,10 +20,12 @@ const Header = ({ count }) => {
       </div>
       <div>
         <div className={style.header_list}>
-          <Link to="/">Home</Link>
+          <Link to="/">
+            <a href="#home">Home</a>
+          </Link>
           <a href="#category">Category</a>
           <a href="#blog">Blog</a>
-          <a href="#contacts">Contacts</a>
+          <a href="#contact">Contacts</a>
         </div>
       </div>
       <div className={style.icon_container}>

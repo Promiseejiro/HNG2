@@ -2,9 +2,22 @@ import Button from "../Button";
 import Typography from "../Typograhy";
 import watch from "../../../src/assets/svg/bestSellers.svg";
 import style from "./index.module.css";
+import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 const BestSellers = () => {
+  const containerRef = useRef();
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash == "#blog") {
+      window.scrollTo({
+        top: containerRef.current.getBoundingClientRect().top - 120,
+        behavior: "smooth",
+      });
+    }
+  }, [location]);
   return (
-    <section className={style.section}>
+    <section className={style.section} ref={containerRef}>
       <div className={style.flex_container}>
         <div className={`${style.flex_item} ${style.content}`}>
           <div>
@@ -27,7 +40,7 @@ const BestSellers = () => {
             </Typography>
             <div className={style.btn_container}>
               <Button
-                   fontWeight="400"
+                fontWeight="400"
                 textSize="14px"
                 verticalPadding="5px"
                 horizontalMargin="10px"
