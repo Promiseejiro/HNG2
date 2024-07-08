@@ -22,8 +22,8 @@ const Header = ({ count }) => {
         <div className={style.header_list}>
           <Link to="/">Home</Link>
           <a href="#category">Category</a>
-          <a>Blog</a>
-          <a>Contacts</a>
+          <a href="#blog">Blog</a>
+          <a href="#contacts">Contacts</a>
         </div>
       </div>
       <div className={style.icon_container}>

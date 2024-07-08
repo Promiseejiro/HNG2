@@ -7,10 +7,10 @@ const SideBar = ({ closeSideBar }) => {
       <img src={timesIcon} className={style.icon} onClick={closeSideBar} />
       <div className={style.sideBar}>
         <div className={style.sideBar_ist}>
-          <a>Home</a>
-          <a>Category</a>
-          <a>Blog</a>
-          <a>Contacts</a>
+          <a onClick={closeSideBar}>Home</a>
+          <a onClick={closeSideBar}>Category</a>
+          <a onClick={closeSideBar}>Blog</a>
+          <a onClick={closeSideBar}>Contacts</a>
         </div>
       </div>
     </div>

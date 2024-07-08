@@ -225,9 +225,16 @@ const SingleProduct = () => {
               {currentProduct.des}
             </Typography>
             <div className={style.btn_container}>
-              <Button verticalMargin="32px" clickHandler={addToCart}>
-                Add to cart
-              </Button>
+              <div className={style.price_container}>
+                <Typography fontWeight="500" size="16px" lineHeight="25px">
+                  ${currentProduct.price}
+                </Typography>
+              </div>
+              <div >
+                <Button verticalMargin="32px" clickHandler={addToCart}>
+                  Add to cart
+                </Button>
+              </div>
             </div>
           </div>
         </div>

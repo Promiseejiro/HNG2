@@ -175,7 +175,7 @@ const Footer = () => {
             </Typography>
             <Typography
               fontWeight="400"
-              size="10px"
+              size="12px"
               lineHeight="18px"
               marginHorizontal="20px"
               marginVertical="10px"
@@ -192,17 +192,6 @@ const Footer = () => {
                 <img src={icon} />
               </div>
             </div>
-            <Typography
-              fontWeight="400"
-              size="10px"
-              lineHeight="18px"
-              align="left"
-              marginHorizontal="20px"
-              marginVertical="10px"
-              color="#fff"
-            >
-              Subscribe to timbo cloud newsletter below.
-            </Typography>
           </div>
         </div>
       </div>

@@ -38,6 +38,7 @@ const Checkout = () => {
     }
     localStorage.setItem("timbo-product", JSON.stringify(newProduct));
     setTotal(calculateTotal(newProduct));
+    setCountCount(newProduct.length);
     setSavedProduct(newProduct);
   };
 

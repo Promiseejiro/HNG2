@@ -7,7 +7,16 @@ const Hero = () => {
     <div className={style.hero_container}>
       <div className={style.top_hero}>
         <Typography fontWeight="700" size="25px" lineHeight="50px">
-          Stay connected, Stay fit,Stay stylish with Timbo Cloud watches
+          Stay connected, Stay fit,Stay stylish with{" "}
+          <Typography
+            fontWeight="700"
+            size="25px"
+            lineHeight="50px"
+            color="#056050"
+          >
+            Timbo Cloud
+          </Typography>
+          watches
         </Typography>
       </div>
       <div className={style.flex_container}>

@@ -1,6 +1,5 @@
 .container {
   margin: 52px 0;
-  border: 1px solid red;
 }
 
 .image_container {
@@ -9,6 +8,7 @@
   justify-content: center;
   border: 2px solid var(--main-color);
   border-radius: 10px;
+  height: 100%;
 }
 
 .image {
@@ -43,7 +43,7 @@
 }
 
 .qty {
-  border: 1px solid black;
+  border: 2px solid #f4f4f4;
   padding: 2px;
   display: flex;
 }
