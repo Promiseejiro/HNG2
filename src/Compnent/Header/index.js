@@ -20,8 +20,8 @@ const Header = () => {
       </div>
       <div>
         <div className={style.header_list}>
-          <a>Home</a>
-          <a>Categoy</a>
+          <Link to="/">Home</Link>
+          <a href="#category">Category</a>
           <a>Blog</a>
           <a>Contacts</a>
         </div>

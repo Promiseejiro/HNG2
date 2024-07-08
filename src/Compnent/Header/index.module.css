@@ -24,7 +24,7 @@
 .icon_container {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 32px;
 }
 
 .header_icon {
@@ -60,5 +60,9 @@
 
   .notify {
     display: none;
+  }
+
+  .icon_container {
+    gap: 16px;
   }
 }

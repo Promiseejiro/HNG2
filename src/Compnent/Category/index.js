@@ -30,7 +30,7 @@ const Category = () => {
     },
   ];
   return (
-    <div className={style.section}>
+    <div className={style.section} >
       <Typography
         fontWeight="600"
         size="25px"

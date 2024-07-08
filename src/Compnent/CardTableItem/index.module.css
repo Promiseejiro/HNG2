@@ -7,7 +7,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid gray;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
 }
 
 .image {
@@ -30,7 +31,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
   height: 100%;
   display: block;
 }
@@ -66,6 +66,10 @@
 .controlbtn {
   width: 2rem;
   width: 2rem;
+}
+
+.clearItem {
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {

@@ -25,62 +25,7 @@ const CartTableItem = ({
         <div className={style.header}>
           <p className={style.product_name}>{name}</p>
         </div>
-        <div>
-          <div className={style.flex_container}>
-            <Typography
-              fontWeight="600"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              Display :
-            </Typography>
-            <Typography
-              fontWeight="400"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              none
-            </Typography>
-          </div>
-          <div className={style.flex_container}>
-            <Typography
-              fontWeight="600"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              Colour:
-            </Typography>
-            <Typography
-              fontWeight="400"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              none
-            </Typography>
-          </div>
-          <div className={style.flex_container}>
-            <Typography
-              fontWeight="600"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              Memory:
-            </Typography>
-            <Typography
-              fontWeight="400"
-              size="12px"
-              lineHeight="5px"
-              marginHorizontal="0px"
-            >
-              none
-            </Typography>
-          </div>
-        </div>
+        <div></div>
       </td>
       <td>
         <div className={style.qty}>
@@ -124,6 +69,7 @@ const CartTableItem = ({
       <td>
         <div>
           <img
+            className={style.clearItem}
             src={delIcon}
             onClick={() => {
               actionInProduct(url, "clear");
