@@ -6,8 +6,8 @@
 .card_list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5px 10px;
-  margin-bottom: 1rem;
+  gap: 20px 10px;
+  margin-bottom: 4rem;
 }
 
 .shippingCard {
@@ -21,6 +21,7 @@
   border-radius: 10px;
   gap: 0;
   margin: auto;
+  /* height: 100%; */
 }
 
 .shippingCard h5 {
