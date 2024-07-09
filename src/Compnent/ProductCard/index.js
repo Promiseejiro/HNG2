@@ -49,7 +49,10 @@ const Product = ({ image, name, rating, price, url, updateCartCount }) => {
           <img src={image} className={style.image} />
         </div>
         <div className={style.product_info}>
-          <Rating rating={rating} />
+          <div className={style.rating}>
+            {" "}
+            <Rating rating={rating} />
+          </div>
           <p className={style.name}>{name}</p>
           <p className={style.price}>${price}</p>
         </div>
