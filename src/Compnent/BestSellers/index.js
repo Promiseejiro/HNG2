@@ -13,7 +13,7 @@ const BestSellers = ({ updateCartCount }) => {
   useEffect(() => {
     if (location.hash == "#blog") {
       window.scrollTo({
-        top: containerRef.current.getBoundingClientRect().top - 120,
+        top: 120,
         behavior: "smooth",
       });
     }
@@ -27,7 +27,7 @@ const BestSellers = ({ updateCartCount }) => {
             <p>Take a look at our top selling product of the week.</p>
             <div className={style.btn_container}>
               <a
-                href="#blog"
+                href="#product"
                 style={{
                   color: "#056050",
                 }}

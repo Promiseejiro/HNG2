@@ -56,6 +56,7 @@ const Checkout = () => {
 
   useEffect(() => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
+    setTotal(calculateTotal(savedProduct));
     savedProduct && setSavedProduct(savedProduct);
     if (savedProduct) {
       setCountCount(savedProduct.length);
@@ -118,7 +119,6 @@ const Checkout = () => {
         ) : (
           <div className={style.empty_cart}>
             <div>
-              {" "}
               <Typography
                 fontWeight="500"
                 size="18px"
