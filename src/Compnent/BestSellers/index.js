@@ -21,23 +21,8 @@ const BestSellers = () => {
       <div className={style.flex_container}>
         <div className={`${style.flex_item} ${style.content}`}>
           <div>
-            <Typography
-              fontWeight="600"
-              size="30px"
-              lineHeight="40px"
-              align="left"
-            >
-              Best sellers
-            </Typography>
-            <Typography
-              fontWeight="500"
-              size="16px"
-              lineHeight="25px"
-              align="left"
-              width="65%"
-            >
-              Take a look at our top selling product of the week.
-            </Typography>
+            <h6 className={style.header}>Best sellers</h6>
+            <p>Take a look at our top selling product of the week.</p>
             <div className={style.btn_container}>
               <Button
                 fontWeight="400"

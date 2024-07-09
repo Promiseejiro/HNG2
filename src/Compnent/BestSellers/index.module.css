@@ -22,7 +22,10 @@
   padding: 32px 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+}
+
+.content h6 {
 }
 
 .btn_container {
@@ -40,6 +43,12 @@
   height: auto;
 }
 
+.header {
+  text-align: left;
+  font-size: 18px;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .flex_container {
     display: flex;
@@ -54,5 +63,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .header {
+    text-align: center;
   }
 }
