@@ -36,7 +36,7 @@ const Checkout = () => {
     } else if (action === "clear") {
       console.log("hello");
       newProduct = savedProduct.filter((product) => product.url !== url);
-      toast(<Toast text={"Cart cleared"} type="danger" />);
+      toast(<Toast text={"Item remove"} type="danger" />);
       setSavedProduct([]);
     } else if (action === "remove") {
       newProduct = [];
