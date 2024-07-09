@@ -17,10 +17,11 @@ const HomePage = () => {
 
   useEffect(() => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
-    setCountCount(savedProduct.length);
+    if (savedProduct) {
+      setCountCount(savedProduct.length);
+    }
   }, []);
 
- 
   return (
     <div>
       <Header count={cartCount} />

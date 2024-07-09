@@ -50,9 +50,11 @@ const Checkout = () => {
   useEffect(() => {
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     savedProduct && setSavedProduct(savedProduct);
-    setCountCount(savedProduct.length);
-    savedProduct && setTotal(calculateTotal(savedProduct));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (savedProduct) {
+      setCountCount(savedProduct.length);
+    }
+    // savedProduct && setTotal(calculateTotal(savedProduct));
+    // window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
   return (

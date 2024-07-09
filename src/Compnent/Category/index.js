@@ -58,8 +58,8 @@ const Category = () => {
         Browse by category
       </Typography>
       <div className={style.card_list}>
-        {category.map((item) => (
-          <CategoryCard cardText={item.name} image={item.image} />
+        {category.map((item, index) => (
+          <CategoryCard cardText={item.name} image={item.image} key={index} />
         ))}
       </div>
     </div>

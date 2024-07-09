@@ -20,9 +20,7 @@ const Header = ({ count }) => {
       </div>
       <div>
         <div className={style.header_list}>
-          <Link to="/">
-            <a href="#home">Home</a>
-          </Link>
+          <Link to="/">Home</Link>
           <a href="#category">Category</a>
           <a href="#blog">Blog</a>
           <a href="#contact">Contacts</a>
