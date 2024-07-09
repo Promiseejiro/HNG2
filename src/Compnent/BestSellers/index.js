@@ -26,14 +26,20 @@ const BestSellers = ({ updateCartCount }) => {
             <h6 className={style.header}>Best sellers</h6>
             <p>Take a look at our top selling product of the week.</p>
             <div className={style.btn_container}>
-              
               <Button
                 fontWeight="400"
                 textSize="14px"
                 verticalPadding="5px"
                 horizontalMargin="10px"
               >
-                Shop now
+                <a
+                  href="#blog"
+                  style={{
+                    color: "#056050",
+                  }}
+                >
+                  Shop now
+                </a>
               </Button>
             </div>
           </div>
