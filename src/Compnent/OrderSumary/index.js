@@ -37,7 +37,7 @@ const OrderSummary = ({ total, checkOutSuccess }) => {
           lineHeight="25px"
           marginHorizontal="0"
         >
-          ${total}
+          ${total.toLocaleString()}
         </Typography>
       </div>
       <div className={style.flex_container}>
