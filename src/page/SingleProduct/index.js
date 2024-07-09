@@ -199,7 +199,9 @@ const SingleProduct = () => {
     setCurrentProduct(product.filter((prod) => prod.url === producturl));
     console.log(product.filter((prod) => prod.url === producturl)[0]);
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
-    setCountCount(savedProduct.length);
+    if (savedProduct) {
+      setCountCount(savedProduct.length);
+    }
   }, []);
   return (
     <section>
