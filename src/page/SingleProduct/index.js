@@ -24,7 +24,7 @@ import Toast from "../../Compnent/Toast";
 const SingleProduct = () => {
   const { producturl } = useParams();
   console.log(producturl);
-  const [currentProduct, setCurrentProduct] = useState({});
+  const [currentProduct, setCurrentProduct] = useState([]);
   const [cartCount, setCountCount] = useState(0);
 
   const product = [
@@ -195,7 +195,9 @@ const SingleProduct = () => {
     }
   };
   useEffect(() => {
-    setCurrentProduct(product.filter((prod) => prod.url === producturl)[0]);
+    console.log(product.filter((prod) => prod.url === producturl));
+    setCurrentProduct(product.filter((prod) => prod.url === producturl));
+    console.log(product.filter((prod) => prod.url === producturl)[0]);
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     setCountCount(savedProduct.length);
   }, []);
@@ -215,35 +217,43 @@ const SingleProduct = () => {
           </Typography>
         </Link>
       </div>
-      {currentProduct.url && (
-        <div className={style.flex_container}>
-          <div className={style.flex_item}>
-            <div>
-              <Typography fontWeight="600" size="34px" lineHeight="40px">
-                {currentProduct.name}
-              </Typography>
-              <Typography fontWeight="500" size="16px" lineHeight="25px">
-                {currentProduct.des}
-              </Typography>
-              <div className={style.btn_container}>
-                <div className={style.price_container}>
-                  <Typography fontWeight="500" size="16px" lineHeight="25px">
-                    ${currentProduct.price}
-                  </Typography>
-                </div>
+      {currentProduct.length > 0 && (
+        <div>
+          {currentProduct.map((prod) => (
+            <div className={style.flex_container}>
+              <div className={style.flex_item}>
                 <div>
-                  <Button verticalMargin="32px" clickHandler={addToCart}>
-                    Add to cart
-                  </Button>
+                  <Typography fontWeight="600" size="34px" lineHeight="40px">
+                    {prod.name}
+                  </Typography>
+                  <Typography fontWeight="500" size="16px" lineHeight="25px">
+                    {prod.des}
+                  </Typography>
+                  <div className={style.btn_container}>
+                    <div className={style.price_container}>
+                      <Typography
+                        fontWeight="500"
+                        size="16px"
+                        lineHeight="25px"
+                      >
+                        ${prod.price}
+                      </Typography>
+                    </div>
+                    <div>
+                      <Button verticalMargin="32px" clickHandler={addToCart}>
+                        Add to cart
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className={style.flex_item}>
+                <div>
+                  <img src={prod.image} className={style.image} />
                 </div>
               </div>
             </div>
-          </div>
-          <div className={style.flex_item}>
-            <div>
-              <img src={currentProduct.image} className={style.image} />
-            </div>
-          </div>
+          ))}
         </div>
       )}
 
