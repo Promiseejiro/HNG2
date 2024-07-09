@@ -215,35 +215,38 @@ const SingleProduct = () => {
           </Typography>
         </Link>
       </div>
-      <div className={style.flex_container}>
-        <div className={style.flex_item}>
-          <div>
-            <Typography fontWeight="600" size="34px" lineHeight="40px">
-              {currentProduct.name}
-            </Typography>
-            <Typography fontWeight="500" size="16px" lineHeight="25px">
-              {currentProduct.des}
-            </Typography>
-            <div className={style.btn_container}>
-              <div className={style.price_container}>
-                <Typography fontWeight="500" size="16px" lineHeight="25px">
-                  ${currentProduct.price}
-                </Typography>
-              </div>
-              <div >
-                <Button verticalMargin="32px" clickHandler={addToCart}>
-                  Add to cart
-                </Button>
+      {currentProduct.url && (
+        <div className={style.flex_container}>
+          <div className={style.flex_item}>
+            <div>
+              <Typography fontWeight="600" size="34px" lineHeight="40px">
+                {currentProduct.name}
+              </Typography>
+              <Typography fontWeight="500" size="16px" lineHeight="25px">
+                {currentProduct.des}
+              </Typography>
+              <div className={style.btn_container}>
+                <div className={style.price_container}>
+                  <Typography fontWeight="500" size="16px" lineHeight="25px">
+                    ${currentProduct.price}
+                  </Typography>
+                </div>
+                <div>
+                  <Button verticalMargin="32px" clickHandler={addToCart}>
+                    Add to cart
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className={style.flex_item}>
-          <div>
-            <img src={currentProduct.image} className={style.image} />
+          <div className={style.flex_item}>
+            <div>
+              <img src={currentProduct.image} className={style.image} />
+            </div>
           </div>
         </div>
-      </div>
+      )}
+
       <Footer />
     </section>
   );
