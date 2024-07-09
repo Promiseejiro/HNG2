@@ -29,14 +29,6 @@ const SingleProduct = () => {
 
   const product = [
     {
-      image: watch,
-      name: "12 pro smart watch",
-      des: "Stay connected and healthy with our latest smart watches! Track your workouts and receive notifications on the go.",
-      rating: 5,
-      price: 500,
-      url: "secondWatch.png",
-    },
-    {
       image: iphone,
       name: "Iphone 13 pro max",
       des: "Experience the latest technology with the iPhone 13 Pro Max, featuring an advanced camera system and a powerful A15 Bionic chip.",
@@ -154,15 +146,16 @@ const SingleProduct = () => {
     setCountCount(count);
   };
   const addToCart = () => {
+    console.log(currentProduct[0].image);
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     if (!savedProduct) {
       savedProduct = [
         {
-          image: currentProduct.image,
-          name: currentProduct.name,
-          rating: currentProduct.rating,
-          price: currentProduct.price,
-          url: currentProduct.url,
+          image: currentProduct[0].image,
+          name: currentProduct[0].name,
+          rating: currentProduct[0].rating,
+          price: currentProduct[0].price,
+          url: currentProduct[0].url,
           qty: 1,
         },
       ];
@@ -180,16 +173,17 @@ const SingleProduct = () => {
         savedProduct = [
           ...savedProduct,
           {
-            image: currentProduct.image,
-            name: currentProduct.name,
-            rating: currentProduct.rating,
-            price: currentProduct.price,
-            url: currentProduct.url,
+            image: currentProduct[0].image,
+            name: currentProduct[0].name,
+            rating: currentProduct[0].rating,
+            price: currentProduct[0].price,
+            url: currentProduct[0].url,
             qty: 1,
           },
         ];
         toast(<Toast text={"Item Added to cart"} type="success" />);
         updateCartCount(savedProduct.length);
+        console.log(savedProduct);
         localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
       }
     }
@@ -197,7 +191,6 @@ const SingleProduct = () => {
   useEffect(() => {
     console.log(product.filter((prod) => prod.url === producturl));
     setCurrentProduct(product.filter((prod) => prod.url === producturl));
-    console.log(product.filter((prod) => prod.url === producturl)[0]);
     let savedProduct = JSON.parse(localStorage.getItem("timbo-product"));
     if (savedProduct) {
       setCountCount(savedProduct.length);

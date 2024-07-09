@@ -4,7 +4,9 @@ import watch from "../../../src/assets/svg/bestSellers.svg";
 import style from "./index.module.css";
 import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
-const BestSellers = () => {
+import toast from "react-hot-toast";
+import Toast from "../Toast";
+const BestSellers = ({ updateCartCount }) => {
   const containerRef = useRef();
   const location = useLocation();
 

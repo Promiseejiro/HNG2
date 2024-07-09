@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import ShippingCards from "../../Compnent/ShippingCard";
 import Toast from "../../Compnent/Toast";
 import toast from "react-hot-toast";
+import Button from "../../Compnent/Button";
 
 const Checkout = () => {
   const [savedProduct, setSavedProduct] = useState([]);
@@ -91,6 +92,17 @@ const Checkout = () => {
                 savedProduct={savedProduct}
                 actionInProduct={actionInProduct}
               />
+              {/* <div className={style.clearCarBtn}>
+                {" "}
+                <Button
+                  verticalPadding="5px"
+                  horizontalPadding="10px"
+                  clickHandler={() => {
+                    actionInProduct("clear");
+                  }}
+                >
+                </Button>
+              </div> */}
             </div>
 
             <div className={style.flex_item_2}>

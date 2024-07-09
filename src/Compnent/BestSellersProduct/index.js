@@ -169,6 +169,7 @@ const BestSellersProduct = ({ updateCartCount }) => {
       }
     }
   };
+
   return (
     <section>
       <div className={style.flex_container}>
@@ -203,6 +204,7 @@ const BestSellersProduct = ({ updateCartCount }) => {
                   verticalPadding="2px"
                   horizontalMargin="10px"
                   clickHandler={() => {
+                    updateCartCount();
                     addToCart();
                   }}
                 >

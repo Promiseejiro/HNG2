@@ -65,7 +65,7 @@ const CartTableItem = ({
           </div>
         </div>
       </td>
-      <td>{price}</td>
+      <td>${price}</td>
       <td>
         <div>
           <img

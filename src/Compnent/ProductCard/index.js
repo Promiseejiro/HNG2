@@ -51,15 +51,7 @@ const Product = ({ image, name, rating, price, url, updateCartCount }) => {
         <div className={style.product_info}>
           <Rating rating={rating} />
           <p className={style.name}>{name}</p>
-          <Typography
-            fontWeight="500"
-            size="14px"
-            align="left"
-            marginHorizontal="0"
-            marginVertical="0"
-          >
-            ${price}
-          </Typography>
+          <p className={style.price}>${price}</p>
         </div>
       </Link>
       <div className={style.btn_container}>

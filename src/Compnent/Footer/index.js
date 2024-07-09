@@ -28,7 +28,7 @@ const Footer = () => {
               marginHorizontal="20px"
               color="#fff"
             >
-              Quick links
+              About
             </Typography>
             <Typography
               fontWeight="400"
@@ -39,7 +39,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              Blog
+              Marketplace
             </Typography>
             <Typography
               fontWeight="400"
@@ -50,7 +50,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              Join our taem
+              Services
             </Typography>
             <Typography
               fontWeight="400"
@@ -61,7 +61,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              About us
+              Seller
             </Typography>
           </div>
           <div className={style.list}>
@@ -73,7 +73,7 @@ const Footer = () => {
               marginHorizontal="20px"
               color="#fff"
             >
-              Quick links
+              Categories
             </Typography>
             <Typography
               fontWeight="400"
@@ -84,7 +84,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              Blog
+              Phones
             </Typography>
             <Typography
               fontWeight="400"
@@ -95,7 +95,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              Join our taem
+              Laptops
             </Typography>
             <Typography
               fontWeight="400"
@@ -106,7 +106,18 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              About us
+              Ear pod
+            </Typography>
+            <Typography
+              fontWeight="400"
+              size="12px"
+              lineHeight="18px"
+              align="left"
+              marginHorizontal="20px"
+              marginVertical="10px"
+              color="#fff"
+            >
+              Head phones
             </Typography>
           </div>
           <div className={style.list}>
@@ -118,7 +129,7 @@ const Footer = () => {
               marginHorizontal="20px"
               color="#fff"
             >
-              Quick links
+              Help
             </Typography>
             <Typography
               fontWeight="400"
@@ -129,18 +140,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              Blog
-            </Typography>
-            <Typography
-              fontWeight="400"
-              size="12px"
-              lineHeight="18px"
-              align="left"
-              marginHorizontal="20px"
-              marginVertical="10px"
-              color="#fff"
-            >
-              Join our taem
+              Get help
             </Typography>
             <Typography
               fontWeight="400"
@@ -162,7 +162,7 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              About us
+              Contact Us
             </Typography>
             <Typography
               fontWeight="400"
@@ -173,7 +173,18 @@ const Footer = () => {
               marginVertical="10px"
               color="#fff"
             >
-              About us
+              FAQs
+            </Typography>
+            <Typography
+              fontWeight="400"
+              size="12px"
+              lineHeight="18px"
+              align="left"
+              marginHorizontal="20px"
+              marginVertical="10px"
+              color="#fff"
+            >
+              Self Hepls
             </Typography>
           </div>
           <div className={style.newLetter}>
@@ -205,6 +216,16 @@ const Footer = () => {
                 <img src={icon} />
               </div>
             </div>
+            <Typography
+              fontWeight="400"
+              size="12px"
+              lineHeight="18px"
+              marginHorizontal="20px"
+              marginVertical="10px"
+              color="#fff"
+            >
+              Email address
+            </Typography>
           </div>
         </div>
       </div>
