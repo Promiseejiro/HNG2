@@ -37,9 +37,6 @@ const Header = ({ count }) => {
           </div>
         </Link>
         <div>
-          <img src={notify} className={style.notify} />
-        </div>
-        <div>
           <img src={bar} className={style.bar} onClick={sideBarOpenHandler} />
         </div>
       </div>

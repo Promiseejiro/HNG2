@@ -35,8 +35,13 @@ const Checkout = () => {
       );
     } else if (action === "clear") {
       console.log("hello");
+      newProduct = savedProduct.filter((product) => product.url !== url);
+      toast(<Toast text={"Cart cleared"} type="danger" />);
+      setSavedProduct([]);
+    } else if (action === "remove") {
       newProduct = [];
       toast(<Toast text={"Cart cleared"} type="danger" />);
+      setSavedProduct([]);
     }
     localStorage.setItem("timbo-product", JSON.stringify(newProduct));
     setTotal(calculateTotal(newProduct));

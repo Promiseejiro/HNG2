@@ -30,7 +30,7 @@ const CartTable = ({ savedProduct, actionInProduct }) => {
         <button
           className={style.cartBtn}
           onClick={() => {
-            actionInProduct("", "clear");
+            actionInProduct("", "remove");
           }}
         >
           <img src={cartBtn} />
