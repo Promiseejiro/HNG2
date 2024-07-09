@@ -16,6 +16,7 @@ import ledtv from "../../assets/images/ledtv.png";
 import fridge from "../../assets/images/fridge.png";
 import riglight from "../../assets/images/riglight.png";
 import toast from "react-hot-toast";
+import Toast from "../Toast";
 const BestSellersProduct = ({ updateCartCount }) => {
   const product = [
     {
@@ -146,13 +147,13 @@ const BestSellersProduct = ({ updateCartCount }) => {
         },
       ];
       localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
-      toast("item addes");
     } else {
       const prevProduct = localStorage.getItem("timbo-product");
       const checkIfProductIsincart = JSON.parse(prevProduct).filter(
-        (product) => product.url === "fidge"
+        (product) => product.url === "fidge.png"
       );
-      if (checkIfProductIsincart.length === 1) {
+      if (checkIfProductIsincart.length > 0) {
+        toast(<Toast text={"Item Already in cart"} type="success" />);
       } else {
         savedProduct = [
           ...savedProduct,
@@ -165,6 +166,8 @@ const BestSellersProduct = ({ updateCartCount }) => {
             qty: 1,
           },
         ];
+        toast(<Toast text={"Item added to cart"} type="success" />);
+        updateCartCount(savedProduct.length + 1);
         localStorage.setItem("timbo-product", JSON.stringify(savedProduct));
       }
     }
@@ -204,7 +207,6 @@ const BestSellersProduct = ({ updateCartCount }) => {
                   verticalPadding="2px"
                   horizontalMargin="10px"
                   clickHandler={() => {
-                    updateCartCount();
                     addToCart();
                   }}
                 >

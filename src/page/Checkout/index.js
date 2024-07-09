@@ -34,8 +34,9 @@ const Checkout = () => {
         product.url === url ? { ...product, qty: product.qty + 1 } : product
       );
     } else if (action === "clear") {
-      newProduct = savedProduct.filter((product) => product.url !== url);
-      toast(<Toast text={"Item removed from cart"} type="danger" />);
+      console.log("hello");
+      newProduct = [];
+      toast(<Toast text={"Cart cleared"} type="danger" />);
     }
     localStorage.setItem("timbo-product", JSON.stringify(newProduct));
     setTotal(calculateTotal(newProduct));

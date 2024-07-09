@@ -33,6 +33,18 @@
   display: block;
 }
 
+.cartBtn {
+  padding: 5px 10px;
+  background-color: var(--dark-main-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  margin-top: 1rem;
+  gap: 16px;
+}
+
 @media (max-width: 768px) {
   .container {
     width: 100%;

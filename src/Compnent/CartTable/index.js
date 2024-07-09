@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import CartTableItem from "../CardTableItem";
 import Typography from "../Typograhy";
 import style from "./index.module.css";
-
+import cartBtn from "../../../src/assets/svg/cartyy.svg";
 const CartTable = ({ savedProduct, actionInProduct }) => {
   return (
     <div className={style.container}>
@@ -26,6 +26,17 @@ const CartTable = ({ savedProduct, actionInProduct }) => {
           ))}
         </tbody>
       </table>
+      <div>
+        <button
+          className={style.cartBtn}
+          onClick={() => {
+            actionInProduct("", "clear");
+          }}
+        >
+          <img src={cartBtn} />
+          Clear cart
+        </button>
+      </div>
     </div>
   );
 };
