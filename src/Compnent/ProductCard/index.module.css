@@ -16,6 +16,7 @@
 
 .image {
   width: 70px;
+  min-height: 4rem;
   height: auto;
 }
 
@@ -53,8 +54,9 @@ a {
   text-align: left;
 }
 
-.price {
+.productPrice {
   text-align: left;
+  margin: 0;
 }
 
 .rating {

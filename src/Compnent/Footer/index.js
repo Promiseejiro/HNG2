@@ -197,16 +197,9 @@ const Footer = () => {
             >
               Newsletter
             </Typography>
-            <Typography
-              fontWeight="400"
-              size="12px"
-              lineHeight="18px"
-              marginHorizontal="20px"
-              marginVertical="10px"
-              color="#fff"
-            >
+            <p className={style.text}>
               Subscribe to timbo cloud newsletter below.
-            </Typography>
+            </p>
             <div className={style.subscribe_form}>
               <input
                 className={style.footer_input}

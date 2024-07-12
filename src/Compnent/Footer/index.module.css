@@ -28,7 +28,7 @@
 .subscribe_form {
   display: flex;
   gap: 3px;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .footer_input {
@@ -40,7 +40,7 @@
   background-color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   border-radius: 5px;
   font-size: 14px;
 }
@@ -61,6 +61,13 @@
   border-radius: 5px;
 }
 
+.text {
+  padding-left: 1rem;
+  color: var(--white-color);
+  text-align: left;
+  font-size: 14px;
+}
+
 @media (max-width: 768px) {
   .flex_container {
     display: flex;
@@ -72,6 +79,9 @@
   }
 
   .newLetter {
-    width: 90%;
+    width: 100%;
+  }
+
+  .text {
   }
 }

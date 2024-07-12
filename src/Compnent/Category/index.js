@@ -5,7 +5,7 @@ import headPhone from "../../assets/images/headphone.png";
 import earpod from "../../assets/images/earpod.png";
 import categoryWatch from "../../assets/images/categoryWatch.png";
 import camera from "../../assets/images/3redcamera.png";
-import phone from "../../assets/images/phone.jpg";
+import phone from "../../assets/images/phone1.png";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { useRef } from "react";

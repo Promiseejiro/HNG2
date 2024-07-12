@@ -50,11 +50,10 @@ const Product = ({ image, name, rating, price, url, updateCartCount }) => {
         </div>
         <div className={style.product_info}>
           <div className={style.rating}>
-            {" "}
             <Rating rating={rating} />
           </div>
           <p className={style.name}>{name}</p>
-          <p className={style.price}>${price}</p>
+          <p className={style.productPrice}>${price}</p>
         </div>
       </Link>
       <div className={style.btn_container}>
